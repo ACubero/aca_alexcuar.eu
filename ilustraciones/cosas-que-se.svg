@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" role="img" aria-labelledby="cqs-title">
+	<title id="cqs-title">Cosas qué sé</title>
+	<defs>
+		<linearGradient id="cqs-grad" gradientUnits="userSpaceOnUse" x1="40" y1="40" x2="760" y2="460">
+			<stop offset="0" stop-color="#7c6cff"/>
+			<stop offset=".5" stop-color="#c084fc"/>
+			<stop offset="1" stop-color="#22d3ee"/>
+		</linearGradient>
+		<linearGradient id="cqs-page" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0" stop-color="#7c6cff" stop-opacity=".22"/>
+			<stop offset="1" stop-color="#22d3ee" stop-opacity=".06"/>
+		</linearGradient>
+		<radialGradient id="cqs-glow" cx=".5" cy=".5" r=".5">
+			<stop offset="0" stop-color="#c084fc" stop-opacity=".55"/>
+			<stop offset="1" stop-color="#7c6cff" stop-opacity="0"/>
+		</radialGradient>
+		<style>
+			.cqs-float { animation: cqs-float 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+			.cqs-d1 { animation-delay: -1.5s; }
+			.cqs-d2 { animation-delay: -3s; }
+			.cqs-d3 { animation-delay: -4.5s; }
+			.cqs-pulse { animation: cqs-pulse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+			.cqs-spin { animation: cqs-spin 14s linear infinite; transform-box: fill-box; transform-origin: center; }
+			.cqs-twinkle { animation: cqs-twinkle 2.6s ease-in-out infinite; }
+			@keyframes cqs-float { 50% { transform: translateY(-14px); } }
+			@keyframes cqs-pulse { 50% { transform: scale(1.12); opacity: .7; } }
+			@keyframes cqs-spin { to { transform: rotate(360deg); } }
+			@keyframes cqs-twinkle { 50% { opacity: .2; } }
+			@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+		</style>
+	</defs>
+
+	<ellipse class="cqs-pulse" cx="400" cy="250" rx="260" ry="200" fill="url(#cqs-glow)"/>
+	<circle cx="400" cy="250" r="190" stroke="url(#cqs-grad)" stroke-opacity=".25" stroke-dasharray="4 10"/>
+	<circle cx="400" cy="250" r="235" stroke="url(#cqs-grad)" stroke-opacity=".12"/>
+
+	<!-- Libro abierto -->
+	<g>
+		<path d="M400 410c-48-26-108-32-170-26V196c62-6 122 0 170 26 48-26 108-32 170-26v188c-62-6-122 0-170 26z" fill="url(#cqs-page)" stroke="url(#cqs-grad)" stroke-width="5" stroke-linejoin="round"/>
+		<path d="M400 222v188" stroke="url(#cqs-grad)" stroke-width="5" stroke-linecap="round"/>
+		<g stroke="url(#cqs-grad)" stroke-width="4" stroke-linecap="round" opacity=".6">
+			<path d="M262 238c40-2 76 4 108 18M262 272c40-2 76 4 108 18M262 306c40-2 76 4 108 18M262 340c40-2 70 4 96 14"/>
+			<path d="M430 256c32-14 68-20 108-18M430 290c32-14 68-20 108-18M430 324c32-14 68-20 108-18M442 354c26-10 56-16 96-14"/>
+		</g>
+	</g>
+
+	<!-- Bombilla -->
+	<g class="cqs-float">
+		<circle cx="400" cy="112" r="44" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqs-grad)" stroke-width="5"/>
+		<path d="M386 152v10a14 14 0 0 0 28 0v-10" stroke="url(#cqs-grad)" stroke-width="5" stroke-linecap="round"/>
+		<path d="M388 116l12 14 12-14" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+		<g stroke="#22d3ee" stroke-width="4" stroke-linecap="round">
+			<path d="M400 46v-14M448 64l10-10M352 64l-10-10M466 112h14M334 112h-14"/>
+		</g>
+	</g>
+
+	<!-- Código -->
+	<g class="cqs-float cqs-d1">
+		<rect x="132" y="120" width="104" height="72" rx="16" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqs-grad)" stroke-width="4"/>
+		<path d="M166 142l-16 14 16 14M202 142l16 14-16 14M190 136l-12 40" stroke="#22d3ee" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+	</g>
+
+	<!-- Base de datos -->
+	<g class="cqs-float cqs-d2">
+		<ellipse cx="616" cy="128" rx="44" ry="14" fill="#7c6cff" fill-opacity=".2" stroke="url(#cqs-grad)" stroke-width="4"/>
+		<path d="M572 128v56c0 8 20 14 44 14s44-6 44-14v-56M572 156c0 8 20 14 44 14s44-6 44-14" stroke="url(#cqs-grad)" stroke-width="4"/>
+	</g>
+
+	<!-- Engranaje -->
+	<g class="cqs-float cqs-d3">
+		<g class="cqs-spin">
+			<circle cx="642" cy="330" r="22" stroke="url(#cqs-grad)" stroke-width="5"/>
+			<path d="M642 290v14M642 356v14M602 330h14M668 330h14M614 302l10 10M660 348l10 10M614 358l10-10M660 312l10-10" stroke="url(#cqs-grad)" stroke-width="6" stroke-linecap="round"/>
+		</g>
+	</g>
+
+	<!-- Terminal -->
+	<g class="cqs-float cqs-d2">
+		<rect x="118" y="300" width="96" height="66" rx="14" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqs-grad)" stroke-width="4"/>
+		<path d="M138 324l12 10-12 10M160 346h26" stroke="#c084fc" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+	</g>
+
+	<!-- Destellos -->
+	<g fill="#22d3ee">
+		<path class="cqs-twinkle" d="M286 70l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
+		<path class="cqs-twinkle cqs-d1" d="M540 52l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" style="animation-delay:-1s"/>
+		<circle class="cqs-twinkle" cx="700" cy="230" r="5" fill="#c084fc" style="animation-delay:-.6s"/>
+		<circle class="cqs-twinkle" cx="96" cy="236" r="4" fill="#7c6cff" style="animation-delay:-1.8s"/>
+		<circle class="cqs-twinkle" cx="500" cy="440" r="4" style="animation-delay:-2.2s"/>
+	</g>
+</svg>

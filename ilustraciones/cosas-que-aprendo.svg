@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" role="img" aria-labelledby="cqa-title">
+	<title id="cqa-title">Cosas que aprendo</title>
+	<defs>
+		<linearGradient id="cqa-grad" gradientUnits="userSpaceOnUse" x1="40" y1="40" x2="760" y2="460">
+			<stop offset="0" stop-color="#7c6cff"/>
+			<stop offset=".5" stop-color="#c084fc"/>
+			<stop offset="1" stop-color="#22d3ee"/>
+		</linearGradient>
+		<linearGradient id="cqa-step" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0" stop-color="#7c6cff" stop-opacity=".28"/>
+			<stop offset="1" stop-color="#7c6cff" stop-opacity=".02"/>
+		</linearGradient>
+		<radialGradient id="cqa-glow" cx=".5" cy=".5" r=".5">
+			<stop offset="0" stop-color="#22d3ee" stop-opacity=".45"/>
+			<stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+		</radialGradient>
+		<style>
+			.cqa-float { animation: cqa-float 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+			.cqa-d1 { animation-delay: -1.2s; }
+			.cqa-d2 { animation-delay: -2.4s; }
+			.cqa-d3 { animation-delay: -3.6s; }
+			.cqa-path { stroke-dasharray: 900; stroke-dashoffset: 900; animation: cqa-draw 4s ease-out forwards, cqa-glow 3s 4s ease-in-out infinite; }
+			.cqa-twinkle { animation: cqa-twinkle 2.4s ease-in-out infinite; }
+			@keyframes cqa-float { 50% { transform: translateY(-12px); } }
+			@keyframes cqa-draw { to { stroke-dashoffset: 0; } }
+			@keyframes cqa-glow { 50% { opacity: .55; } }
+			@keyframes cqa-twinkle { 50% { opacity: .2; } }
+			@media (prefers-reduced-motion: reduce) { * { animation: none !important; } .cqa-path { stroke-dashoffset: 0; } }
+		</style>
+	</defs>
+
+	<ellipse cx="610" cy="120" rx="200" ry="150" fill="url(#cqa-glow)"/>
+
+	<!-- Escalera de progreso -->
+	<g stroke="url(#cqa-grad)" stroke-width="4" stroke-linejoin="round">
+		<rect x="120" y="360" width="120" height="90" rx="12" fill="url(#cqa-step)"/>
+		<rect x="250" y="300" width="120" height="150" rx="12" fill="url(#cqa-step)"/>
+		<rect x="380" y="240" width="120" height="210" rx="12" fill="url(#cqa-step)"/>
+		<rect x="510" y="180" width="120" height="270" rx="12" fill="url(#cqa-step)"/>
+	</g>
+	<path d="M90 470h620" stroke="url(#cqa-grad)" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+
+	<!-- Trayectoria ascendente -->
+	<path class="cqa-path" d="M150 340C200 330 230 300 290 282s90-40 140-60 90-42 140-62 70-60 100-96" stroke="#22d3ee" stroke-width="5" stroke-linecap="round" stroke-dasharray="900"/>
+	<path d="M650 72l22-10-4 24" stroke="#22d3ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- Etiquetas de tecnologías -->
+	<g font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-weight="700" font-size="22" text-anchor="middle">
+		<g class="cqa-float">
+			<rect x="124" y="300" width="124" height="40" rx="20" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqa-grad)" stroke-width="3"/>
+			<text x="180" y="327" fill="#8b5cf6">Prompts</text>
+		</g>
+		<g class="cqa-float cqa-d1">
+			<rect x="270" y="240" width="80" height="40" rx="20" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqa-grad)" stroke-width="3"/>
+			<text x="310" y="267" fill="#8b5cf6">n8n</text>
+		</g>
+		<g class="cqa-float cqa-d2">
+			<rect x="386" y="180" width="108" height="40" rx="20" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqa-grad)" stroke-width="3"/>
+			<text x="440" y="207" fill="#8b5cf6">Claude</text>
+		</g>
+		<g class="cqa-float cqa-d3">
+			<rect x="496" y="120" width="148" height="40" rx="20" fill="#7c6cff" fill-opacity=".14" stroke="url(#cqa-grad)" stroke-width="3"/>
+			<text x="570" y="147" fill="#8b5cf6">Agentes IA</text>
+		</g>
+	</g>
+
+	<!-- Chip IA -->
+	<g class="cqa-float cqa-d1">
+		<path d="M684 208v-16M710 208v-16M736 208v-16M684 308v16M710 308v16M736 308v16M660 232h-16M660 258h-16M660 284h-16M760 232h16M760 258h16M760 284h16" stroke="url(#cqa-grad)" stroke-width="4" stroke-linecap="round"/>
+		<rect x="660" y="208" width="100" height="100" rx="16" fill="#7c6cff" fill-opacity=".25" stroke="url(#cqa-grad)" stroke-width="5"/>
+		<rect x="676" y="224" width="68" height="68" rx="10" stroke="#22d3ee" stroke-width="3" stroke-opacity=".7"/>
+		<text x="710" y="270" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-weight="700" font-size="30" text-anchor="middle" fill="#8b5cf6">IA</text>
+	</g>
+
+	<!-- Red neuronal -->
+	<g stroke="url(#cqa-grad)" stroke-width="2.5" opacity=".7">
+		<path d="M440 70l60-44M440 70l70 34M500 26l70 30M510 104l60-48M500 26l10 78"/>
+	</g>
+	<g fill="#22d3ee">
+		<circle class="cqa-twinkle" cx="440" cy="70" r="7"/>
+		<circle class="cqa-twinkle" cx="500" cy="26" r="6" style="animation-delay:-.8s" fill="#c084fc"/>
+		<circle class="cqa-twinkle" cx="510" cy="104" r="7" style="animation-delay:-1.6s"/>
+		<circle class="cqa-twinkle" cx="570" cy="56" r="6" style="animation-delay:-2.2s" fill="#7c6cff"/>
+	</g>
+
+	<!-- Brote -->
+	<g class="cqa-float cqa-d2">
+		<path d="M70 450v-60" stroke="url(#cqa-grad)" stroke-width="5" stroke-linecap="round"/>
+		<path d="M70 410c-30 0-44-18-44-40 26 0 44 14 44 40zM70 396c0-28 16-46 44-46 0 26-18 46-44 46z" fill="#22d3ee" fill-opacity=".25" stroke="url(#cqa-grad)" stroke-width="4" stroke-linejoin="round"/>
+	</g>
+
+	<!-- Destellos -->
+	<path class="cqa-twinkle" d="M360 110l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#c084fc"/>
+	<circle class="cqa-twinkle" cx="250" cy="170" r="5" fill="#22d3ee" style="animation-delay:-1s"/>
+	<circle class="cqa-twinkle" cx="740" cy="380" r="4" fill="#7c6cff" style="animation-delay:-1.8s"/>
+</svg>

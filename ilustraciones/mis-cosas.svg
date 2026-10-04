@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" role="img" aria-labelledby="mc-title">
+	<title id="mc-title">Mis cosas</title>
+	<defs>
+		<linearGradient id="mc-grad" gradientUnits="userSpaceOnUse" x1="40" y1="40" x2="760" y2="460">
+			<stop offset="0" stop-color="#7c6cff"/>
+			<stop offset=".5" stop-color="#c084fc"/>
+			<stop offset="1" stop-color="#22d3ee"/>
+		</linearGradient>
+		<linearGradient id="mc-screen" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" stop-color="#7c6cff" stop-opacity=".35"/>
+			<stop offset="1" stop-color="#22d3ee" stop-opacity=".12"/>
+		</linearGradient>
+		<radialGradient id="mc-glow" cx=".5" cy=".5" r=".5">
+			<stop offset="0" stop-color="#7c6cff" stop-opacity=".5"/>
+			<stop offset="1" stop-color="#7c6cff" stop-opacity="0"/>
+		</radialGradient>
+		<style>
+			.mc-type { animation: mc-type 3.2s steps(1) infinite; }
+			.mc-l2 { animation-delay: -.8s; }
+			.mc-l3 { animation-delay: -1.6s; }
+			.mc-l4 { animation-delay: -2.4s; }
+			.mc-bar { animation: mc-bar 1.6s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+			.mc-b2 { animation-delay: -.4s; }
+			.mc-b3 { animation-delay: -.8s; }
+			.mc-b4 { animation-delay: -1.2s; }
+			.mc-steam { animation: mc-steam 3s ease-in-out infinite; }
+			.mc-s2 { animation-delay: -1.5s; }
+			.mc-wave { animation: mc-wave 2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+			.mc-w2 { animation-delay: -1s; }
+			.mc-caret { animation: mc-caret 1s steps(1) infinite; }
+			@keyframes mc-type { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+			@keyframes mc-bar { 50% { transform: scaleY(.45); } }
+			@keyframes mc-steam { 0% { opacity: 0; transform: translateY(8px); } 40% { opacity: .9; } 100% { opacity: 0; transform: translateY(-16px); } }
+			@keyframes mc-wave { 0% { opacity: .9; transform: scale(.7); } 100% { opacity: 0; transform: scale(1.5); } }
+			@keyframes mc-caret { 50% { opacity: 0; } }
+			@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+		</style>
+	</defs>
+
+	<ellipse cx="400" cy="230" rx="330" ry="190" fill="url(#mc-glow)"/>
+
+	<!-- Monitor izquierdo: gráfico -->
+	<g transform="rotate(-6 170 210)">
+		<rect x="70" y="140" width="200" height="130" rx="14" fill="url(#mc-screen)" stroke="url(#mc-grad)" stroke-width="5"/>
+		<g fill="#22d3ee">
+			<rect class="mc-bar" x="100" y="210" width="18" height="40" rx="4"/>
+			<rect class="mc-bar mc-b2" x="130" y="190" width="18" height="60" rx="4" fill="#c084fc"/>
+			<rect class="mc-bar mc-b3" x="160" y="200" width="18" height="50" rx="4"/>
+			<rect class="mc-bar mc-b4" x="190" y="172" width="18" height="78" rx="4" fill="#7c6cff"/>
+			<rect class="mc-bar mc-b2" x="220" y="186" width="18" height="64" rx="4"/>
+		</g>
+		<path d="M150 270v26M120 300h60" stroke="url(#mc-grad)" stroke-width="5" stroke-linecap="round"/>
+	</g>
+
+	<!-- Monitor central: código -->
+	<rect x="270" y="90" width="260" height="170" rx="16" fill="#7c6cff" fill-opacity=".14" stroke="url(#mc-grad)" stroke-width="5"/>
+	<circle cx="294" cy="112" r="5" fill="#f472b6"/>
+	<circle cx="312" cy="112" r="5" fill="#c084fc"/>
+	<circle cx="330" cy="112" r="5" fill="#22d3ee"/>
+	<g stroke-width="7" stroke-linecap="round">
+		<path class="mc-type" d="M296 140h70" stroke="#c084fc"/>
+		<path class="mc-type mc-l2" d="M316 164h110M440 164h40" stroke="#22d3ee"/>
+		<path class="mc-type mc-l3" d="M316 188h60M390 188h90" stroke="#7c6cff"/>
+		<path class="mc-type mc-l4" d="M296 212h80" stroke="#c084fc"/>
+	</g>
+	<rect class="mc-caret" x="388" y="204" width="6" height="16" rx="2" fill="#22d3ee"/>
+	<path d="M400 260v30M350 296h100" stroke="url(#mc-grad)" stroke-width="5" stroke-linecap="round"/>
+
+	<!-- Monitor derecho: vídeo -->
+	<g transform="rotate(6 630 210)">
+		<rect x="530" y="140" width="200" height="130" rx="14" fill="url(#mc-screen)" stroke="url(#mc-grad)" stroke-width="5"/>
+		<circle cx="630" cy="205" r="30" fill="#7c6cff" fill-opacity=".14" stroke="#22d3ee" stroke-width="4"/>
+		<path d="M621 190l24 15-24 15z" fill="#22d3ee"/>
+		<path d="M650 270v26M620 300h60" stroke="url(#mc-grad)" stroke-width="5" stroke-linecap="round"/>
+	</g>
+
+	<!-- Mesa -->
+	<path d="M40 318h720" stroke="url(#mc-grad)" stroke-width="6" stroke-linecap="round"/>
+	<path d="M90 318v130M710 318v130" stroke="url(#mc-grad)" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+
+	<!-- Portátil -->
+	<path d="M330 316l12-40h116l12 40z" fill="url(#mc-screen)" stroke="url(#mc-grad)" stroke-width="4" stroke-linejoin="round"/>
+
+	<!-- Micrófono (podcast) -->
+	<g>
+		<rect x="492" y="262" width="26" height="40" rx="13" fill="#7c6cff" fill-opacity=".25" stroke="url(#mc-grad)" stroke-width="4"/>
+		<path d="M484 288a21 21 0 0 0 42 0" stroke="url(#mc-grad)" stroke-width="4" stroke-linecap="round"/>
+		<path d="M505 309v7" stroke="url(#mc-grad)" stroke-width="4" stroke-linecap="round"/>
+		<circle class="mc-wave" cx="505" cy="282" r="26" stroke="#22d3ee" stroke-width="2.5"/>
+		<circle class="mc-wave mc-w2" cx="505" cy="282" r="26" stroke="#c084fc" stroke-width="2.5"/>
+	</g>
+
+	<!-- Taza de café -->
+	<g>
+		<path d="M560 278h50v22a20 20 0 0 1-20 20h-10a20 20 0 0 1-20-20z" fill="#c084fc" fill-opacity=".25" stroke="url(#mc-grad)" stroke-width="4"/>
+		<path d="M610 284h8a10 10 0 0 1 0 20h-8" stroke="url(#mc-grad)" stroke-width="4"/>
+		<path class="mc-steam" d="M576 268c-6-8 6-12 0-20" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
+		<path class="mc-steam mc-s2" d="M594 268c-6-8 6-12 0-20" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
+	</g>
+
+	<!-- Planta -->
+	<g>
+		<path d="M670 316l-6-30h40l-6 30z" fill="#7c6cff" fill-opacity=".25" stroke="url(#mc-grad)" stroke-width="4" stroke-linejoin="round"/>
+		<path d="M684 286c-14-10-18-26-10-40 14 8 16 24 10 40zM684 286c4-18 18-28 34-26-2 16-16 26-34 26z" fill="#22d3ee" fill-opacity=".3" stroke="url(#mc-grad)" stroke-width="3.5" stroke-linejoin="round"/>
+	</g>
+
+	<!-- Destellos -->
+	<path d="M120 70l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#22d3ee" class="mc-type"/>
+	<circle cx="690" cy="80" r="5" fill="#c084fc" class="mc-type mc-l2"/>
+	<circle cx="560" cy="60" r="4" fill="#7c6cff" class="mc-type mc-l3"/>
+</svg>

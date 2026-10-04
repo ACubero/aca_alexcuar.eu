@@ -1,0 +1,8 @@
+@font-face { font-family: "Inter"; font-weight: 300 800; font-display: swap; src: url("fonts/inter-latin.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-weight: 400 700; font-display: swap; src: url("fonts/space-grotesk-latin.woff2") format("woff2"); }
+body { font: 400 1.125rem/1.8 "Inter", -apple-system, "Segoe UI", sans-serif; color: #3a4058; }
+h1, h2, h3, h4, h5, h6 { font-family: "Space Grotesk", "Inter", sans-serif; color: #0b0d1a; line-height: 1.15; letter-spacing: -.025em; }
+a { color: #5b4bf5; }
+code, pre { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+pre { background: #0b0d18; color: #e4e7f2; padding: 1.4em 1.6em; border-radius: 18px; }
+blockquote { border-left: 3px solid #5b4bf5; background: rgba(91, 75, 245, .08); padding: 1.2em 1.6em; border-radius: 18px; }
