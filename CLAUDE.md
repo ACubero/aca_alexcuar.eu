@@ -145,3 +145,6 @@ Minimal correct, closed, self-contained response.
 
 ## User Address
 Always address the user by name, **Alex**, in every single response, without exception.
+
+## Code
+Use CodeGraph for code search, navigation, and analysis.
